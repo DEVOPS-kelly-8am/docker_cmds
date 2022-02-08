@@ -1,0 +1,23 @@
+docker info
+docker ps
+docker ps -a
+docker images 
+docker search imagename
+docker pull imagename
+docker run -it image 
+docker run -it image /bin/bash
+docker attach <containrid>	
+docker rmi 
+
+docker create 
+docker start
+docker inspect Container/Image
+docker run busybox ping google.com 
+docker logs <containerid>
+docker stop <containerid>
+docker kill <containerid>
+docker exec -it <containerid> <commend>entry point 
+docker run -p 80:8080 
+
+docker run -e 
+
