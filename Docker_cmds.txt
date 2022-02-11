@@ -1,0 +1,131 @@
+DOCKER:::::::::
+
+
+Container ::::::::: 
+VM:
+
+
+
+DOCKER Engine ----- DOCKERD, DOCKER CLI 
+DOCKER deamon
+Docker registry
+Docker Client or CLI 
+
+
+docker --version
+docker info
+docker ps
+docker ps -a
+docker images 
+docker search imagename
+docker pull imagename
+docker run -it image 
+docker run -it image /bin/bash
+docker attach <containrid>	
+docker rmi 
+
+docker create 
+docker start
+docker inspect Container/Image
+docker run busybox ping google.com 
+docker logs <containerid>
+docker stop <containerid>
+docker kill <containerid>
+docker exec -it <containerid> <commend>entry point 
+docker run -p 80:8080 
+
+docker run -e 
+
+docker cmd vs entrypoints
+
+
+docker networking
+Dockerfile:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Dockerfile componets 
+FROM:
+RUN:
+COPY:
+ADD:
+EXPOSE
+WORKDIR
+CMD
+ENTRYPOINT 
+ENV 
+
+docker build <image> <dockerfile_path>
+
+FROM ubuntu:latest
+RUN echo "helloworld"
+
+FROM ubuntu:latest
+RUN echo "helloworld" > /tmp/testfile 
+
+FROM ubuntu:latest
+RUN echo "helloworld"
+WORKDIR tmp 
+
+
+docker stroage :::::::::::::::::::::::::::::::::::::::::::
+
+volumes 
+mounted ------
+persistent volumes 
+readwritemany, PV 
+
+docker create volume 
+docker volume ls 
+docker 
+
+
+
+
+
+
+
+docker networking ::::::::::::::::::::::::::::::::::::::::
+ARP- Address Resolution protocal
+RFC 826
+
+FTP----file transfer protocal
+SMTP----
+HTTP----
+ssl and tls
+HTTPS-----> http + SSL/TLS
+DNS ----> 
+DHCP ---> 
+
+docker network create network_name 
+docket network inspect network_name
+docker network ls
+docker network rm network_name
+docker network connect <network_name> <container>
+
+docker run  --network <network name> < imagename>
+
+
+  
+docker-compose:::::::::::::::::::::::::::::::::::::::::::::
+docker-compose.yml
+version: '3'
+  
+services:
+
+  web:
+    image: nginx
+
+  database:
+    image: redis
+
+docker-compose up -d
+docker-compose down 
+docker-compose up -d --scale service=3
+
+
+
+docker swarm::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+
+
+
