@@ -52,7 +52,7 @@ CMD
 ENTRYPOINT 
 ENV 
 
-docker build -i <image> <dockerfile_path>
+docker build -t <image> <dockerfile_path>
 
 FROM ubuntu:latest
 RUN echo "helloworld"
